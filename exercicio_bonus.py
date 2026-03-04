@@ -25,8 +25,6 @@ for lista in lista_produtos:
     print(lista)
 
 
-
 '''print(lista_produtos)
 print(f'Produto:{produto['nome']}')
->>>>>>> b1b0ecfce6345b094ffb5575c1cb18d1708d38f7
 print(f'Valor: R${produto['preço']}')'''
