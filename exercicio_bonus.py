@@ -7,22 +7,29 @@ def clear():
 clear()
 
 lista_produtos =[
-    {'nome': 'nsx', 'preco': 15000000},
-    {'nome': 'rx7', 'preco': 2000000},
-    {'nome': 'supra', 'preco': 1200000}
+    {'nome': 'nsx', 'preco': 15000000,'quantidade':2,'categoria':'automoveis'},
+    {'nome': 'rx7', 'preco': 2000000,'quantidade':1,'categoria':'automoveis'},
+    {'nome': 'supra', 'preco': 1200000,'quantidade':1,'categoria':'automoveis'}
 ]
 
-produto = {
-    'nome':input('nome do produto:'),
-    'preco':float(input('Valor do produto:')),
-    'quantidade':int(input('Quantidade em estoque:')),
-    'categoria':input('Categoria do seu produto:')
-}
+while True:
+    produto = {
+        'nome':input('nome do produto:'),
+        'preco':float(input('Valor do produto:')),
+        'quantidade':int(input('Quantidade em estoque:')),
+        'categoria':input('Categoria do seu produto:')
+    }
 
-lista_produtos.append({'nome': produto['nome'], 'preco': produto['preco']})
+    lista_produtos.append(produto)
+
+    escolha = input("Deseja cadastrar outro profuto ? Digite S ou N")
+    if escolha.upper() != "S": 
+        break
+
 
 for lista in lista_produtos:
-    print(lista)
+     print(lista)
+
 
 
 '''print(lista_produtos)
